@@ -1,0 +1,13 @@
+version: "3.9"
+
+services:
+  web:
+    build: .
+    container_name: flask-guess-game
+    ports:
+      - "5001:5000"
+    environment:
+      - FLASK_APP=game.py
+      - FLASK_ENV=development
+    volumes:
+      - .:/app
